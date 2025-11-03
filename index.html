@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVerse - Digital Solutions</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
+
+        /* top navigation bar */
+        .top-nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: #2c5f8d;
+            padding: 20px 0;
+            z-index: 999;
+            transition: all 0.4s ease;
+        }
+
+        .top-nav.nav-scrolled {
+            background-color: #c23866;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+            padding: 14px 0;
+        }
+
+        .nav-wrapper {
+            max-width: 1140px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            align-items: center;
+        }
+
+        .brand-logo {
+            color: white;
+            font-size: 27px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 38px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-list a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 11px 20px;
+            border-radius: 7px;
+            transition: all 0.3s;
+        }
+
+        .nav-list a:hover {
+            background-color: rgba(255,255,255,0.22);
+            transform: translateY(-1px);
+        }
+
+        /* hamburger for mobile */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-toggle span {
+            width: 26px;
+            height: 3px;
+            background: white;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        /* main sections */
+        .page-section {
+            min-height: 100vh;
+            padding-top: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #2c5f8d 0%, #3d7fb8 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 52px;
+            margin-bottom: 22px;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 23px;
+            margin-bottom: 38px;
+            opacity: 0.94;
+        }
+
+        .cta-btn {
+            background: white;
+            color: #2c5f8d;
+            padding: 17px 45px;
+            border: none;
+            border-radius: 35px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: transform 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .about-section {
+            background-color: #f5f7fa;
+        }
+
+        .services-section {
+            background-color: #ffffff;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #c23866 0%, #e84a5f 100%);
+            color: white;
+        }
+
+        .content-wrapper {
+            max-width: 880px;
+        }
+
+        .section-title {
+            font-size: 44px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-text {
+            font-size: 19px;
+            line-height: 1.75;
+        }
+
+        /* responsive design */
+        @media screen and (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .nav-list {
+                position: fixed;
+                left: -100%;
+                top: 68px;
+                flex-direction: column;
+                background-color: rgba(44, 95, 141, 0.98);
+                width: 100%;
+                padding: 40px 0;
+                text-align: center;
+                transition: left 0.4s ease;
+            }
+
+            .nav-list.menu-active {
+                left: 0;
+            }
+
+            .hero-section h1 {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- main navigation -->
+    <div class="top-nav" id="navbar">
+        <div class="nav-wrapper">
+            <div class="brand-logo">TechVerse</div>
+            <ul class="nav-list" id="navList">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle" id="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- hero area -->
+    <div class="page-section hero-section" id="home">
+        <div class="content-wrapper">
+            <h1>Transform Your Digital Presence</h1>
+            <p>Innovative web solutions for growing businesses in Pakistan</p>
+            <button class="cta-btn">Start Your Project</button>
+        </div>
+    </div>
+
+    <!-- about area -->
+    <div class="page-section about-section" id="about">
+        <div class="content-wrapper">
+            <h2 class="section-title">Who We Are</h2>
+            <p class="section-text">TechVerse is a digital agency based in Islamabad, Pakistan. We specialize in creating modern websites and web applications that help businesses establish their online presence. Our team brings together technical expertise and creative thinking to deliver solutions that actually make a difference for our clients.</p>
+        </div>
+    </div>
+
+    <!-- services area -->
+    <div class="page-section services-section" id="services">
+        <div class="content-wrapper">
+            <h2 class="section-title">What We Offer</h2>
+            <p class="section-text">We provide complete web development services including custom website design, e-commerce platforms, mobile-responsive layouts, and ongoing maintenance. Whether you need a simple business website or a complex web application, we've got the skills and experience to bring your vision to life. Our focus is on delivering quality work that helps your business grow.</p>
+        </div>
+    </div>
+
+    <!-- contact area -->
+    <div class="page-section contact-section" id="contact">
+        <div class="content-wrapper">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-text">Ready to take your business online? Get in touch with us today and let's discuss how we can help you achieve your digital goals!</p>
+        </div>
+    </div>
+
+    <script>
+        var navbar = document.getElementById('navbar');
+        var toggle = document.getElementById('toggle');
+        var navList = document.getElementById('navList');
+        
+        // navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 80) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+        
+        // mobile menu
+        toggle.addEventListener('click', function() {
+            navList.classList.toggle('menu-active');
+        });
+        
+        // close menu on link click
+        var menuLinks = document.querySelectorAll('.nav-list a');
+        menuLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                navList.classList.remove('menu-active');
+            });
+        });
+    </script>
+</body>
+  </html>
